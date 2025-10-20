@@ -57,9 +57,16 @@
   </main>
 
   <footer>
-    <div class="wrap muted">
-      &copy; Stefano Bigioggero — Conta Colli - Tutti i diritti riservati.
-    </div>
-  </footer>
+    <footer>
+      <p>© <span id="year"></span> Stefano Bigioggero — Conta Colli - Tutti i diritti riservati.</p>
+    </footer>
+  </div>
+
+  <script>
+    const d = new Date();
+    const months = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+    document.getElementById("last-update").textContent = d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+    document.getElementById("year").textContent = d.getFullYear();
+  </script>
 </body>
 </html>
